@@ -11,7 +11,7 @@ app.service('iBeaconService', function() {
     
     var beacons = {
         "00000000-EA98-1001-B000-001C4D9C64FA": {icon: 'img/1.jpg', rssi: -63, proximity: PROX_UNKNOWN, name: 'JIBBER', number: '1', id: '000265C9', major: 1, minor: 1},
-        "F5A10AF9-A670-4F54-B491-8607393F0DDC": {icon: 'img/2.jpg', rssi: -63, proximity: PROX_UNKNOWN, name: 'BUONO', number: '2', id: '0002D08D', major: 1, minor: 1},
+        "F5A10AF9-A670-4F54-B491-8607393F0DDC": {icon: 'img/2.jpg', rssi: -63, proximity: PROX_UNKNOWN, name: 'herohero', number: '2', id: '0002D08D', major: 1, minor: 1},
         "ABE425B2-0000-4409-8035-1668AFC7FCFE": {icon: 'img/3.jpg', rssi: -63, proximity: PROX_UNKNOWN, name: 'LION', number: '3', id: '00029BAA', major: 1, minor: 1},
         "BC564E82-0000-43A3-94E7-1D54EC02622D": {icon: 'img/4.jpg', rssi: -63, proximity: PROX_UNKNOWN, name: 'COMA', number: '4', id: '0003F321', major: 1, minor: 1},
         "6F29CF85-0000-414A-A7A6-6206A2DA9773": {icon: 'img/5.jpg', rssi: -63, proximity: PROX_UNKNOWN, name: 'GNAR', number: '5', id: '00027EA8', major: 1, minor: 1},
