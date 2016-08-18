@@ -8,7 +8,7 @@ var app = angular.module('myApp', ['onsen']);
 app.service('iBeaconService', function() {
     this.currentBeaconUuid = null;
     this.onDetectCallback = function(){};
-    
+alert("aaaaaa");    
     var beacons = {
         "00000000-EA98-1001-B000-001C4D9C64FA": {icon: 'img/1.jpg', rssi: -63, proximity: PROX_UNKNOWN, name: 'JIBBER', number: '1', id: '000265C9', major: 1, minor: 1},
         "48534442-4c45-4144-80c0-180000000001": {icon: 'img/2.jpg', rssi: -63, proximity: PROX_UNKNOWN, name: 'herohero', number: '2', id: '0002D08D', major: 1, minor: 0},
