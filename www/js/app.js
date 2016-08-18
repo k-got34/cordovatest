@@ -11,7 +11,7 @@ app.service('iBeaconService', function() {
     
     var beacons = {
         "00000000-EA98-1001-B000-001C4D9C64FA": {icon: 'img/1.jpg', rssi: -63, proximity: PROX_UNKNOWN, name: 'JIBBER', number: '1', id: '000265C9', major: 1, minor: 1},
-        "48534442-4C45-4144-80C0-180000000001": {icon: 'img/2.jpg', rssi: -63, proximity: PROX_UNKNOWN, name: 'herohero', number: '2', id: '0002D08D', major: 1, minor: 0},
+        "48534442-4c45-4144-80c0-180000000001": {icon: 'img/2.jpg', rssi: -63, proximity: PROX_UNKNOWN, name: 'herohero', number: '2', id: '0002D08D', major: 1, minor: 0},
         "ABE425B2-0000-4409-8035-1668AFC7FCFE": {icon: 'img/3.jpg', rssi: -63, proximity: PROX_UNKNOWN, name: 'LION', number: '3', id: '00029BAA', major: 1, minor: 1},
         "BC564E82-0000-43A3-94E7-1D54EC02622D": {icon: 'img/4.jpg', rssi: -63, proximity: PROX_UNKNOWN, name: 'COMA', number: '4', id: '0003F321', major: 1, minor: 1},
         "6F29CF85-0000-414A-A7A6-6206A2DA9773": {icon: 'img/5.jpg', rssi: -63, proximity: PROX_UNKNOWN, name: 'GNAR', number: '5', id: '00027EA8', major: 1, minor: 1},
@@ -26,7 +26,7 @@ app.service('iBeaconService', function() {
                 result.push(new cordova.plugins.locationManager.BeaconRegion(value.id, key, value.major, value.minor));
             });
         } catch (e) {
-            console.log('createBeacon err: ' + e);
+            alert('createBeacon err: ' + e);
         }
         return result;
     };
@@ -40,16 +40,16 @@ app.service('iBeaconService', function() {
 
                 delegate.didDetermineStateForRegion = function (pluginResult) {
                 
-                    console.log('[DOM] didDetermineStateForRegion: ' + JSON.stringify(pluginResult));
+                    alert('[DOM] didDetermineStateForRegion: ' + JSON.stringify(pluginResult));
                 
                     cordova.plugins.locationManager.appendToDeviceLog('[DOM] didDetermineStateForRegion: '
                         + JSON.stringify(pluginResult));
                 };
                 
                 delegate.didStartMonitoringForRegion = function (pluginResult) {
-                    console.log('didStartMonitoringForRegion:', pluginResult);
+                    alert('didStartMonitoringForRegion:', pluginResult);
                 
-                    console.log('didStartMonitoringForRegion:' + JSON.stringify(pluginResult));
+                    alert('didStartMonitoringForRegion:' + JSON.stringify(pluginResult));
                 };
                 
                 delegate.didRangeBeaconsInRegion = function (pluginResult) {
@@ -60,7 +60,7 @@ app.service('iBeaconService', function() {
                     }
                     
                     callback(beaconData, uuid);
-                    console.log('[DOM] didRangeBeaconsInRegion: ' + JSON.stringify(pluginResult));
+                    alert('[DOM] didRangeBeaconsInRegion: ' + JSON.stringify(pluginResult));
                 };
                 
                 cordova.plugins.locationManager.setDelegate(delegate);
@@ -74,7 +74,7 @@ app.service('iBeaconService', function() {
                 });
                 
             } catch (e) {
-                console.log('Delegate err: ' + e);   
+                alert('Delegate err: ' + e);   
             }
         }, false);
     };
